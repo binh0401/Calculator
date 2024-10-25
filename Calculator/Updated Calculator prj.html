@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <link rel="stylesheet" href="calculator.css">
   </head>
   <body>
     
@@ -21,7 +21,7 @@
     ">3</button>
     <button onclick="
     update(' + ')
-    ">+</button>
+    " class="sign">+</button>
     </p>
 
     <p>
@@ -39,7 +39,7 @@
     ">6</button>
     <button onclick="
    update(' - ')
-    ">-</button>
+    " class="sign">-</button>
     </p>
 
     <p>
@@ -57,7 +57,7 @@
     ">9</button>
     <button onclick="
     update(' * ')
-    ">*</button>
+    " class="sign">*</button>
     
     
     
@@ -78,15 +78,15 @@
     calculation = eval(calculation);
     localStorage.setItem('calculation',calculation);
     display.innerHTML = calculation;
-    ">=</button>
+    " >=</button>
     <button onclick="
-   update(' / ')
-    ">/</button>
+   update(' / ') 
+    " class="sign">/</button>
 
     </p>
 
     <p>
-      <button onclick="clearCalculation()">Clear</button>
+      <button class="clear" onclick="clearCalculation()">Clear</button>
     </p>
 
     <script>
@@ -114,6 +114,9 @@
         alert('Cleared!');
         display.innerHTML = '0';
       }
+
+
+      
     </script>
 
     
